@@ -13,9 +13,11 @@
 #   Check Package:             'Cmd + Shift + E'
 #   Test Package:              'Cmd + Shift + T'
 
-hello <- function() {
-  print("Hello, world!")
-}
+#hello <- function() {
+#  print("Hello, world!")
+#}
+
+prueba <- data.frame(hola = c(1, 2, 3), despues = c("la", "le", "li"))
 
 #library(devtools)
 #use_github()
