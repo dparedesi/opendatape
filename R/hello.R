@@ -17,5 +17,10 @@ hello <- function() {
   print("Hello, world!")
 }
 
+#library(devtools)
+#use_github()
+#use_github(protocol = "https")
+
+#browse_github_token()
 
 
