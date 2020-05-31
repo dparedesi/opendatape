@@ -19,6 +19,8 @@
 
 prueba <- data.frame(hola = c(1, 2, 3), despues = c("la", "le", "li"))
 
+save(prueba, file = "data/prueba.rda", compress = "xz")
+
 #library(devtools)
 #use_github()
 #use_github(protocol = "https")
