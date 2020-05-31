@@ -17,9 +17,26 @@
 #  print("Hello, world!")
 #}
 
-prueba <- data.frame(hola = c(1, 2, 3), despues = c("la", "le", "li"))
+library(tidyverse)
+#library(lubridate)
 
-save(prueba, file = "data/prueba.rda", compress = "xz")
+url <- "https://dparedesi.github.io/DS-con-R/notas-estudiantes.csv"
+notas <- read_csv(url)
+
+notas <- notas %>%
+  gather(pregunta, puntaje, -inicio, -genero, -tipo) %>%
+  mutate(inicio = "2020-05-03") %>%
+  as.data.frame()
+
+#notas %>%
+#  ggplot() +
+#  aes(pregunta, puntaje) +
+#  geom_boxplot()
+
+
+
+save(notas, file = "data/notas.rda", compress = "xz")
+
 
 #library(devtools)
 #use_github()
